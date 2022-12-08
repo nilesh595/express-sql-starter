@@ -1,0 +1,27 @@
+{
+  "name": "express-starter",
+  "version": "1.0.0",
+  "description": "A starter template for express js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "prod": "node server.js",
+    "inspect": "nodemon --inspect server.js",
+    "migrate": "npx knex migrate:latest --knexfile ./database/knexfile.js",
+    "rollback": "npx knex migrate:rollback --knexfile ./database/knexfile.js",
+    "make": "npx knex migrate:make --knexfile ./database/knexfile.js",
+    "seed": "npx knex seed:make --knexfile ./database/knexfile.js",
+    "populate-db": "npx knex seed:run --knexfile ./database/knexfile.js"
+  },
+  "author": "Nilesh Kalange",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "knex": "^2.3.0",
+    "sqlite3": "^5.1.2",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
